@@ -1,6 +1,8 @@
 from django.conf.urls import url
 from . import views
 
+app_name = 'frontpage'
+
 urlpatterns = [
     # /frontpage/
     url(r'^$', views.index, name='index'),

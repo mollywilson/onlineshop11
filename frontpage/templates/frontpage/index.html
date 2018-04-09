@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Album</title>
-</head>
-<body>
+<!-- Loads the path to your static files -->
+
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'frontpage/style.css' %}" />
+
 {%if all_albums%}
         <ul>
             {%for album in all_albums%}
@@ -14,5 +12,4 @@
 {%else%}
     <h3>Sorry! There's nothing for sale at this time. Please check back later.</h3>
 {%endif%}
-</body>
-</html>
+

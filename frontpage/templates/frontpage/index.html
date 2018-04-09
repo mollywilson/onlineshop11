@@ -8,7 +8,7 @@
 {%if all_albums%}
         <ul>
             {%for album in all_albums%}
-                   <li><a href = "/frontpage/{{album.id}}">{{album.album_name}}</a></li>
+                   <li><a href = "{% url 'detail' album.id %} ">{{album.album_name}}</a></li>
             {%endfor%}
         </ul>
 {%else%}

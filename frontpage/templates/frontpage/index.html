@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{%if all_albums%}
+        <ul>
+            {%for album in all_albums%}
+                   <li><a href = "/frontpage/{{album.id}}">{{album.album_name}}</a></li>
+            {%endfor%}
+        </ul>
+{%else%}
+    <h3>Sorry! There's nothing for sale at this time. Please check back later.</h3>
+{%endif%}
+</body>
+</html>

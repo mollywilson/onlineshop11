@@ -4,7 +4,7 @@
 
             <ul>
                 {%for album in all_albums%}
-                       <li><a href = "{% url 'frontpage:detail' album.id %} ">{{album.album_name}}</a></li>
+                       <li><a href = "{% url 'frontpage:detail' album.id %} "> <img src=" {{ album.picture }}"> <br> {{album.album_name}} by {{album.album_artist}}     £{{album.price}}</a></li>
                 {% endfor %}
             </ul>
 

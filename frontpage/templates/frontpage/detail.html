@@ -1,14 +1,16 @@
 {% extends 'frontpage/base.html' %}
 {% block title %}Album{% endblock %}
+
 {% block body %}
+
     <img src=" {{ album.picture }}">
 
     <h1>{{album.album_name}}</h1>
     <h2>{{album.album_artist}}</h2>
 
-    <ul>
+    <ol>
         {% for song in album.song_set.all %}
         <li>{{song.song_name}} - {{song.song_time}}</li>
         {% endfor %}
-    </ul>
+    </ol>
 {% endblock %}

@@ -1,14 +1,11 @@
 {% extends 'frontpage/base.html' %}
 
 {% block body %}
-    {%if all_albums%}
+
             <ul>
                 {%for album in all_albums%}
                        <li><a href = "{% url 'frontpage:detail' album.id %} ">{{album.album_name}}</a></li>
                 {% endfor %}
             </ul>
-    {%else%}
-        <h3>Sorry! There's nothing for sale at this time. Please check back later.</h3>
-    {%endif%}
 
 {% endblock %}
